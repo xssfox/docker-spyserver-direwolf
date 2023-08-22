@@ -12,6 +12,7 @@ echo "Setting up direwolf config"
 envsubst < /root/direwolf.conf.tpl > /root/direwolf.conf
 cat /root/direwolf.conf
 
+rm direwolf_logs || true
 mkfifo direwolf_logs
 
 if [ "$MODE" == "LSB" ]
